@@ -1,0 +1,30 @@
+ast_list_1 = [
+    [0, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0],
+    [0, 1, 0, 1, 0],
+    [1, 0, 1, 0, 1],
+    [0, 0, 0, 0, 0]
+]
+
+nast_list_2 = [
+    [0, 1, 1, 1, 1],
+    [1, 0, 0, 0, 0],
+    [0, 1, 0, 1, 0],
+    [1, 0, 1, 0, 1],
+    [0, 0, 0, 0, 0]
+]
+nast_list_3 = []
+
+for i in range(5):
+    row = []
+    for j in range(5):
+        total = 0
+        for k in range(5):
+            total += nast_list_1[i][k] * nast_list_2[k][j]
+        row.append(total)
+    nast_list_3.append(row)
+
+
+print("Hasil perkalian matriks 5x5 (nast_list_3):")
+for row in nast_list_3:
+    print(row)
